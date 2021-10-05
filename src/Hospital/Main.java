@@ -1,10 +1,10 @@
 package Hospital;
 
-import Listas.Conta;
-
 public class Main {
 
-	public static void main(String[] args) {
+	private static Internacao dadosEditada;
+
+	public static <Dados> void main(String[] args) {
 //		// Criando os objeto
 //		Endereco end1 = new Endereco("Travessa não te interessa", "12-A", "centro", "Porto Alegre", "RS", "0000");
 //		Paciente pac1 = new Paciente("Julia", "9999", "98888", end1);
@@ -35,23 +35,23 @@ public class Main {
 //		System.out.println(inter1.toString());
 	
 	
-	ListaDeInternacao dados = new ListaDeInternacao();
+	ListaDeInternacao dados = new ListaDeInternacao() ;
 	
-	// Cadastrar as Intenacao
+	// Cadastrar as intenacao
 			Internacao inter1 = new Internacao(null, null);
 			Internacao inter2 = new Internacao(null, null);
 			
 			dados.cadastrar(inter1);
 			dados.cadastrar(inter2);
 			
-			// lista de Internacoa
-			Object dasos = 20;
-			System.out.println(((ListaDeInternacao) dasos).lista());
+			Dados dadosEditada = new Dados();
 			
-			int dadosEditada = 500;
-			dados.editar(dadosEditada);
+			// lista de internacoa
+			System.out.println(dados.lista());
 			
-			// lista de conta
+			dados.editar(inter1);
+			
+			// lista de internacoa
 					System.out.println(dados.lista());		
 					
 	}

@@ -21,7 +21,9 @@ public class Internacao {
 		this.medico = medico;
 		this.dataInternacao = dataInternacao;
 	}
-
+	public Internacao(Paciente paciente) {
+		this.paciente = paciente;
+	}
 	// Getters
 	public String getObservacoes() {
 		return this.observacoes;
